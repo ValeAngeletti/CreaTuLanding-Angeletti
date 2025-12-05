@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.titulo,
+.eslogan {
+    font-family: 'Playfair Display';
+}
+
+a {
+    font-family: 'Inter', serif;
+}
