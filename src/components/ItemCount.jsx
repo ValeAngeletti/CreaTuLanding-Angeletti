@@ -6,7 +6,7 @@ export default function ItemCount() {
 
     return (
         <div className='p-10 w-[20rem] mt-4 ml-3'>
-            <p className='text-center'>Cantidad: {contador}</p>
+            <p className='text-center text-[#0F253F]'>Cantidad: {contador}</p>
             <div className='flex'>
                 <button className="bg-[green] px-7 mr-3 py-2 rounded"
                 onClick={() => setCount(contador - 1)}

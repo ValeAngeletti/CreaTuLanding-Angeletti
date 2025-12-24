@@ -13,12 +13,10 @@ export default function Item({ item }){
             alt={item.title}
             className="w-32 h-32 object-cover"/>
         </figure>
-        <div className="card-body text-[#0F253F] flex flex-col">
-            <div className="presentacion">
-                <h2 className="card-title">hola</h2>
-                <p>{item.description}</p>
-            </div>
-            <div className="card-actions">
+        <div className="card-body text-[#0F253F]">
+            <h2 className="card-title">{item.title}</h2>
+            <p>{item.description}</p>
+            <div className="card-actions justify-end">
                 <span className="btn bg-[#3A4A5D] text-white border-none hover:bg-[#CBB892] hover:text-[#0F253F] transition-all duration-300 ease-out">
                     Ver Producto
                 </span>
