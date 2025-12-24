@@ -1,10 +1,12 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 .titulo,
 .eslogan {
     font-family: 'Playfair Display';
 }
 
-a {
+a,
+.tipografiaInter {
     font-family: 'Inter', serif;
 }
