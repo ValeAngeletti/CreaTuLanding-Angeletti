@@ -9,12 +9,12 @@ export default function Item({ item }){
     <div className="card flex items-center bg-[#E3D7BB] w-full h-100 shadow-sm">
         <figure>
             <img
-            src={item.thumbnail}
+            src={item.img}
             alt={item.title}
             className="w-32 h-32 object-cover"/>
         </figure>
         <div className="card-body text-[#0F253F]">
-            <h2 className="card-title">{item.title}</h2>
+            <h2 className="card-title">{item.name}</h2>
             <p>{item.description}</p>
             <div className="card-actions justify-end">
                 <span className="btn bg-[#3A4A5D] text-white border-none hover:bg-[#CBB892] hover:text-[#0F253F] transition-all duration-300 ease-out">

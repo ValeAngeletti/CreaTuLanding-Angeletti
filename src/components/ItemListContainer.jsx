@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList.jsx"
 import { useParams } from "react-router"
+import { getProducts, getProductsByCategory } from "../firebase/db.js"
 
 export default function ItemListContainer() {
-    const { nombreCategoria } = useParams()
+    const { id } = useParams()
     const [items, setItems] = useState([])
-    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const getProductos = new Promise((resolve, reject) => {
-            const url = nombreCategoria ? `https://dummyjson.com/products/category/${nombreCategoria}` : "https://dummyjson.com/products"
 
-        fetch(url)
-            .then(res => res.json())
-            .then(data => resolve(data.products))
-            .catch(error => reject(error))
-        })
+        if (id) {
+            getProductsByCategory(id).then(productos => setItems(productos))
+        }else{
 
-        getProductos
-        .then(res => setItems(res))
-        .catch(err => console.error("Error al cargar los productos", err))
-        .finally(() => setLoading(false))
-    }, [nombreCategoria])
+            getProducts().then(productos => setItems(productos))
+        }
 
-    if (loading) return <p>Cargando productos ...</p>
+    }, [id])
+
 
     return <ItemList items={items} />
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router"
 import CartWidget from "./CartWidget.jsx"
 import logo from "../assets/logo.png"
 
-export default function NavBar(){
+export default function NavBar({categorias}){
     return (
         <header className="flex justify-between items-center p-3 bg-[#0F253F] text-[#CBB892]">
             <Link to="/" className="divLogo flex items-end">
@@ -10,11 +10,12 @@ export default function NavBar(){
                 <h1 className="titulo text-[2.2rem]">Aura Mist</h1>
             </Link>
             <nav className="flex justify-between gap-8 text-[#E3D7BB] text-[1.1rem]">
-                <Link to="categoria/beauty" className="itemNav">Belleza</Link>
-                <Link to="categoria/fragrances" className="itemNav">Fragancias</Link>
-                <Link to="categoria/skin-care" className="itemNav">Skin Care</Link>
-                <Link to="categoria/womens-bags" className="itemNav">Carteras</Link>
-                <Link to="categoria/womens-jewellery" className="itemNav">Joyería</Link>
+                {categorias.map(categoria => (
+                    <li key={categoria.id}>
+
+                        <Link to={`/categoria/${categoria.name}`} className="itemNav">{categoria.name}</Link>
+                    </li>
+                ))}
             </nav>
             <CartWidget/>
         </header>

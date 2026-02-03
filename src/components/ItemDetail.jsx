@@ -5,18 +5,18 @@ export default function ItemDetail({ item }){
     <div className="card flex flex-row justify-center gap-6 items-center w-full h-screen bg-[#F4EEDF] shadow-sm">
         <figure className="w-1/2 shadow rounded-lg">
             <img
-            src={item.thumbnail}
-            alt="{item.title}"
+            src={item?.img}
+            alt={item?.name}
             className="w-[16rem] h-[16rem]" />
         </figure>
         <div className="detalles h-screen flex flex-col w-1/2">
 
             <div className="card-body flex flex-col gap-6  text-[#0F253F]">
-                <h2 className="card-title text-[4rem] titulo">{item.title}</h2>
-                <p className="text-[2rem] tipografiaInter">{item.description}</p>
-                <p className="text-[2rem] tipografiaInter font-semibold">$ {item.price}</p>
+                <h2 className="card-title text-[4rem] titulo">{item?.name}</h2>
+                <p className="text-[2rem] tipografiaInter">{item?.description}</p>
+                <p className="text-[2rem] tipografiaInter font-semibold">$ {item?.price}</p>
             </div>
-            <ItemCount  />
+            <ItemCount producto={item}/>
         </div>
     </div>
   )
