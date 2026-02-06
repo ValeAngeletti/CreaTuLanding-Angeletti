@@ -58,7 +58,7 @@ export const createOrden = async (user, items, total) => {
 
     try {
         const docRef = await addDoc(collection(db, "orders"), ordenCompra)
-        console.log("Orden creada con ID:", docRef.id)
+        return docRef.id
     } catch (error) {
         console.error("Error al crear orden", error)
     }

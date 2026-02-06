@@ -26,8 +26,16 @@ export default function CartProvider ({children}) {
         return total.toFixed(2)
     }
 
+    const deleteProduct = id => {
+        const carritoCopia = carrito.filter(producto => producto.id != id)
+        setCarrito(carritoCopia)
+
+    }
+
+    const vaciarCarrito = () => setCarrito([])
+
     return (
-        <CartContext.Provider value={{ carrito, getItemsCarrito, addToCarrito, getTotal }}>
+        <CartContext.Provider value={{ carrito, getItemsCarrito, addToCarrito, getTotal, deleteProduct, vaciarCarrito }}>
             {children}
         </CartContext.Provider>
     )
