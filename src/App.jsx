@@ -6,7 +6,7 @@ import CartContainer from "./components/CartContainer.jsx"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="w-full h-screen">
         <NavBarContainer/>
         <Routes>
             <Route path="/" element={<ItemListContainer />} />

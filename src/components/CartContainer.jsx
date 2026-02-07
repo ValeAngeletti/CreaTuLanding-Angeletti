@@ -34,8 +34,8 @@ export default function CartContainer() {
         )
     }
     return (
-        <div className="flex flex-col items-center h-screen bg-[#3A4A5D]">
-            <h2 className="text-5xl pt-8 text-white mb-10 titulo text-[#E3D7BB]" >Carrito de Compras</h2>
+        <div className="w-full h-screen flex flex-col justify-center items-center  bg-[#3A4A5D]">
+            <h2 className="text-5xl pt-20 text-white pb-10 titulo text-[#E3D7BB]" >Carrito de Compras</h2>
             <CartList carrito={carrito} total={total}/>
             <CheckoutForm onSubmit={handleSubmit}/>
         </div>

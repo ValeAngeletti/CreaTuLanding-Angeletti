@@ -1,6 +1,6 @@
 export default function CheckoutForm({ onSubmit}){
     return (
-        <div className="flex flex-col w-full px-38">
+        <div className="w-full h-screen flex flex-col justify-center px-38">
             <h2 className="text-5xl titulo pb-6 text-[#CBB892]">Tus Datos:</h2>
             <form className=" flex flex-col gap-3" onSubmit={onSubmit}>
                 <input type="text" placeholder="Nombre completo" className="w-full bg-[#0F253F] rounded-xl border-none px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition" required id="formName"/>

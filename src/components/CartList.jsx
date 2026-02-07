@@ -8,7 +8,7 @@ export default function CartList({ carrito, total}) {
     const vaciarClick = () => vaciarCarrito()
 
     return (
-        <div className="w-full px-10 md:px-38"> 
+        <div className="w-full h-screen flex flex-col justify-center px-10 md:px-38"> 
             {carrito.map(producto => <CartItem key={producto.id} id={producto.id} nombre={producto.name} cantidad={producto.cantidad} img={producto.img}/>)}
             <div className="flex justify-between w-full items-center my-6">
                 <p className="text-3xl font-[Montserrat] font-semibold">Total = ${total}</p>
