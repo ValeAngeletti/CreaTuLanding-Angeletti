@@ -31,7 +31,6 @@ La app simula una boutique y permite visualizar productos, navegar por categorí
 * Persistencia de datos en Firestore
 
 ---
----
 
 ## 🛠️ Instalación y uso
 
